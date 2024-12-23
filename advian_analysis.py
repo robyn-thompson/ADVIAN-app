@@ -74,8 +74,8 @@ def advian(input):
     return param
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    input_filename = 'AI_data.csv'
-    output_filename = 'AI_results.xlsx'
-    arr = import_file(input_filename)
+    input_filename = input("Please enter source data filename (csv file): ")
+    output_filename = 'results.xlsx'
+    arr = import_file(input_filename+'.csv')
     results = advian(arr)
     write_to_excel(results, output_filename)
